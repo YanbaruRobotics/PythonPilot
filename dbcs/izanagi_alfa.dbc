@@ -1,0 +1,37 @@
+VERSION "created by canmatrix"
+
+
+NS_ :
+
+BS_:
+
+BU_: 
+
+
+BO_ 18 CameraToServoUnit: 8 Vector__XXX
+ SG_ counter_camera_unit : 7|16@0+ (1,0) [0|65535] "" Vector__XXX
+ SG_ servo_on_flag : 23|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ target_angle : 31|24@0- (0.001,0) [-8388.608|8388.607] "deg" Vector__XXX
+
+BO_ 69 ServoUnitToCamera: 8 Vector__XXX
+ SG_ counter_servo_unit : 7|16@0+ (1,0) [0|65535] "" Vector__XXX
+ SG_ time_us_diff : 23|20@0+ (1,0) [0|1048575] "usec" Vector__XXX
+ SG_ button_y : 34|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ button_g : 33|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ button_r : 32|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ actual_angle : 47|24@0- (0.001,0) [-8388.608|8388.607] "deg" Vector__XXX
+
+
+
+CM_ SG_ 18 counter_camera_unit "counter_camera_unit";
+CM_ SG_ 18 servo_on_flag "servo_on_flag";
+CM_ SG_ 18 target_angle "target_angle";
+CM_ SG_ 69 counter_servo_unit "counter_servo_unit";
+CM_ SG_ 69 time_us_diff "time_us_diff";
+CM_ SG_ 69 button_y "button_y";
+CM_ SG_ 69 button_g "button_g";
+CM_ SG_ 69 button_r "button_r";
+CM_ SG_ 69 actual_angle "actual_angle";
+
+
+VAL_ 18 servo_on_flag 0 "OFF" 1 "ON";

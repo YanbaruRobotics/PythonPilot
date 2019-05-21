@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sudo rfcomm bind 0 00:1D:A5:00:01:B8    # you have to wait about 30 sec...

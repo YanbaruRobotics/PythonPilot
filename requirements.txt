@@ -1,0 +1,7 @@
+multiprocess==0.70.7
+numpy==1.16.1
+obd==0.7.0
+scipy==1.2.1
+tensorflow-estimator==1.13.0rc0
+tensorflow-gpu-cuda-10.0==1.13.0rc2
+tensorrt==5.0.2.6

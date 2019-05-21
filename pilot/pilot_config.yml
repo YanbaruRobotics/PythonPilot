@@ -1,0 +1,40 @@
+---
+# perception setting
+force_gpu_compatible: True  # If True with visualize False, speed up. Forces all CPU tensors to be allocated with Cuda pinned memory.
+log_device: False           # Logs GPU / CPU device placement
+allow_memory_growth: True   # limits memory allocation to the actual needs
+
+# pereception transform setting
+top_left:
+- 631
+- 371
+top_right:
+- 651
+- 370
+bottom_left:
+- 434
+- 522
+bottom_right:
+- 854
+- 516
+head_calib: 2
+
+# object label setting
+num_classes: 90
+label_path: '../models/labels/mscoco_label_map.pbtxt'
+
+# object model setting
+split_model: False          # Splits Model into a GPU and CPU session for SSD/Faster R-CNN.
+model_type: 'nms_v2'
+model_path : '../models/ssdlite_mobilenet_v2_coco_2018_05_09/frozen_inference_graph.pb'
+split_shape: 1917
+
+# lane model setting
+lane_weights_path: '../models/tusimple_lanenet/tusimple_lanenet_2019-04-10-20-11-49.ckpt-9999'
+
+# planning setting
+planning_interval : 0.010
+
+# visulalization setting
+vis_textmode : 'day'
+use_chart : True'

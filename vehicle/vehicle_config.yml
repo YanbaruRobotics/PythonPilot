@@ -1,0 +1,86 @@
+---
+# vehicle_mode: 'car'
+vehicle_mode: 'player'
+
+
+############################## Logger Setting ##############################
+# use_logger: True
+use_logger: False
+logger_interval: 0.010
+log_output_dir: '../log/'
+csv_header_list_devicerx: ['time', 
+                           'camera_frame', 
+                           'can_rx_counter_servo_unit', 
+                           'can_rx_time_us_diff', 
+                           'can_rx_button_y', 
+                           'can_rx_button_g', 
+                           'can_rx_button_r', 
+                           'can_rx_actual_angle', 
+                           'can_error_count_rx', 
+                           'can_error_count_tx', 
+                           'obd_rx_temp', 
+                           'obd_rx_speed', 
+                           'obd_rx_rpm', 
+                           'gps_rx_latitude', 
+                           'gps_rx_longitude']
+csv_header_list_devicetx: ['time', 
+                           'camera_frame', 
+                           'can_tx_counter_camera_unit', 
+                           'can_tx_servo_on_flag', 
+                           'can_tx_target_angle']
+
+
+############################## Car Setting ##############################
+# camera setting
+camera_input: 0            # USB Webcam on PC
+camera_width: 1280           # Camera width.
+camera_height: 720          # Camera height.
+camera_fps: 30.0              # Camera fps.
+
+# can setting
+use_can: True
+# use_can: False
+can_name: 'can3'
+can_bustype: 'socketcan'
+can_bitrate: 250000
+can_rx_interval: 0.010
+can_tx_interval: 0.010
+can_dbc_path: '../dbcs/izanagi_alfa.dbc'
+
+# obd setting
+use_obd: True
+# use_obd: False
+obd_interval: 0.010
+obd_protocol: '1'           # 1: SAE J1850 PWM
+
+# gps setting
+# use_gps: True
+use_gps: False
+gps_interval: 0.010
+latitude_init: 37.335480
+longitude_init: -121.893028
+
+
+############################## Player Setting ##############################
+use_csv: True
+# use_csv: False
+unlogger_fps: 30.0
+unlogger_path: '../log/20190517_185215_example_straight/'
+unlogger_shift_sec: 0
+
+
+############################## Common ZMQ parameter ##############################
+zmq_localhost: '127.0.0.1'         # Ports between 49152 & 65535 are "free" ports
+zmq_port_pubsub_camera: 51000
+zmq_port_pubsub_devicerx: 51001
+zmq_port_pubsub_devicetx: 51002
+zmq_topic_camera: 'camera'
+zmq_topic_devicerx: 'devicerx'
+zmq_topic_devicetx: 'devicetx'
+zmq_interval_devicerx: 0.010
+zmq_interval_devicetx: 0.010
+
+# struct — Interpret bytes as packed binary data — Python 3.7.3 documentation
+# https://docs.python.org/3/library/struct.html
+zmq_type_list_devicerx: ['q', 'q', 'q', 'q', '?', '?', '?', 'd', 'q', 'q', 'q', 'q', 'd', 'd', 'd']
+zmq_type_list_devicetx: ['q', 'q', 'q', '?', 'd']
