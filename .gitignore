@@ -1,0 +1,14 @@
+.*
+!/.gitignore
+
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+__pycache__/
+*/__pycache__/*
+
+data/
+models/
+log/
+_tf_output/
+_trash/

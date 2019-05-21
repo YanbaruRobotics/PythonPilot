@@ -102,8 +102,8 @@ You can see other example videos at [here](https://www.youtube.com/playlist?list
 
 ## Acknowledgments
 
-* [The Lane Segmnetation](https://github.com/YanbaruRobotics/PithonPilot/raw/master/pilot/perception/lane_segmentation/) is built upon [LaneNet](https://github.com/MaybeShewill-CV/lanenet-lane-detection) and [BDD100K data](http://bdd-data.berkeley.edu/).
-* [The Object Detection](https://github.com/YanbaruRobotics/PithonPilot/raw/master/pilot/perception/object_detection/) is built upon [realtime_object_detection](https://github.com/naisy/realtime_object_detection).
+* [The Lane Segmnetation](https://github.com/YanbaruRobotics/PythonPilot/blob/master/pilot/perception/lane_segmentation/dnn_based.py) is built upon [LaneNet](https://github.com/MaybeShewill-CV/lanenet-lane-detection) and [BDD100K data](http://bdd-data.berkeley.edu/).
+* [The Object Detection](https://github.com/YanbaruRobotics/PythonPilot/blob/master/pilot/perception/object_detection/load_graph_nms_v2.py) is built upon [realtime_object_detection](https://github.com/naisy/realtime_object_detection).
 
 
 ## License
