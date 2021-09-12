@@ -3,6 +3,7 @@ This is an Open Source Python Framework for prototyping ADAS and Autonomous Vehi
 
 ![](https://github.com/YanbaruRobotics/PythonPilot_readme_resources/raw/master/gifs/pythonpilot-demo.gif)
 
+https://user-images.githubusercontent.com/36523448/132973406-5c318e51-4704-4c4a-be8b-d345cc6421fd.mp4
 
 ## Table of Contents
    * [Tested Development Environment](#Tested-Development-Environment)
